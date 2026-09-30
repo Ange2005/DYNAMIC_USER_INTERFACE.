@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+    background-color: #F4F8FB;
+    color: #1F2937;
+    padding: 20px;
+}
+
+
+/* Header Styles */
+
+header {
+    padding: 15px 15px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #d7ccc8, #f5f0e6);
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+header>h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: rgb(96, 1, 1);
+}
+
+header>small {
+    font-size: 14px;
+    font-weight: normal;
+    color: #000000;
+}
+
+
+/* Form Styles */
+
+#formContainer {
+    padding: 25px;
+    margin: 15px auto;
+    max-width: 600px;
+    color: #cdcac9;
+    background-color: rgb(244, 220, 208);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+#formContainer>#studentform>.input-fields>label {
+    display: flex;
+}
+
+
+/* Input Fields */
+
+#formContainer>#studentForm>.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#formContainer>#studentForm>.input-fields>label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #290c0c;
+}
+
+#formContainer>#studentForm>.input-fields>input,
+#formContainer>#studentForm>.input-fields>select {
+    padding: 12px;
+    border: 1px solid #585a5e;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#formContainer>#studentForm>.input-fields>select:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+
+/* Button */
+
+#studentForm button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #cdb7a5;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#studentForm button:hover {
+    background-color: #8a7e8b;
+    transform: translateY(-2px);
+}
+
+
+/*delete button*/
+
+.dlte {
+    background-color: rgba(124, 119, 119, 0.726);
+    color: rgb(192, 31, 31) (211, 64, 27);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#studentList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    color: rgb(1, 1, 1);
+}
+
+article {
+    background-color: #ecc3aa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(67, 66, 66, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(211, 204, 204) (207, 30, 157);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px black (0, 0, 0.1);
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#studentList {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+    font-size: 15px;
+}
+
+
+/*reponsive design */
+
+@media (width <=320px) {
+    #studentList>.list-item {
+        grid-column: span 12;
+    }
+}
+
+
+/*tablet */
+
+@media (width > 320px) and (width <=600px) {
+    #studentList>.list-item {
+        grid-column: span 4;
+    }
+}
+
+
+/*desktop */
+
+@media (width > 1000px) {
+    #studentList>.list-item {
+        grid-column: span 2;
+    }
+}
